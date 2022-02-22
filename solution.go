@@ -5,21 +5,21 @@ import "math"
 type Sides int
 
 const (
-	SideCircle   Sides = 0
-	SideTriangle Sides = 3
-	SideSquare   Sides = 4
+	SidesCircle   Sides = 0
+	SidesTriangle Sides = 3
+	SidesSquare   Sides = 4
 )
 
 func CalcSquare(sideLen float64, sidesNum Sides) float64 {
 	switch sidesNum {
-	case SideCircle:
+	case SidesCircle:
 		return math.Pi * math.Pow(sideLen, 2)
 
-	case SideTriangle:
+	case SidesTriangle:
 		h := math.Sqrt(math.Pow(sideLen, 2) - math.Pow(sideLen/2, 2))
 		return h * sideLen / 2
 
-	case SideSquare:
+	case SidesSquare:
 		return math.Pow(sideLen, 2)
 
 	default:
