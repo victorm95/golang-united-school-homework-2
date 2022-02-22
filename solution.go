@@ -13,10 +13,10 @@ const (
 func CalcSquare(sideLen float64, sidesNum Sides) float64 {
 	switch sidesNum {
 	case Circle:
-		return math.Pi * sideLen
+		return math.Pi * math.Pow(sideLen, 2)
 
 	case Triangle:
-		h := math.Sqrt(math.Pow(sideLen/2, 2) - math.Pow(sideLen, 2))
+		h := math.Sqrt(math.Pow(sideLen, 2) - math.Pow(sideLen/2, 2))
 		return h * sideLen / 2
 
 	case Square:
